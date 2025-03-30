@@ -10,6 +10,7 @@ public class InputManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       //cast to the movement and shooting scripts
       movement= GetComponent<Movement>();
       shooting= GetComponent<ShootingScript>();
     }
@@ -17,6 +18,7 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //code moved from the ShootingScript
         float input = Input.GetAxis("Horizontal");
 
         movement.Move(Vector2.right * input);

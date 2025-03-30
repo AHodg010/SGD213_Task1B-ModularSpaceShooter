@@ -5,7 +5,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
      [SerializeField]
-    private float acceleration = 75f;
+    private float acceleration = 5f;
+
     private Rigidbody2D rb; 
 
     // Start is called before the first frame update
@@ -16,7 +17,7 @@ public class Movement : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
-      //rb.AddForce(direction * acceleration * Time.deltaTime);
+      //movcement with a consistent velocity
       rb.velocity = direction * acceleration; 
     }
 }
