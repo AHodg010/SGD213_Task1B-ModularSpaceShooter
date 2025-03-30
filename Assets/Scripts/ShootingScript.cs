@@ -24,21 +24,36 @@ public class ShootingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1"))
-        {
-            float CurrentTime = Time.time;
+        //if (Input.GetButton("Fire1"))
+        //{
+        //    float CurrentTime = Time.time;
 
-            // Have a delay so we don't shoot too many bullets
-            if (CurrentTime - lastFiredTime > fireDelay)
-            {
-                Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset);
+        //    // Have a delay so we don't shoot too many bullets
+        //    if (CurrentTime - lastFiredTime > fireDelay)
+        //    {
+        //        Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset);
 
-                Instantiate(bullet, spawnPosition, transform.rotation);
+        //        Instantiate(bullet, spawnPosition, transform.rotation);
 
-                lastFiredTime = CurrentTime;
-            }
+        //        lastFiredTime = CurrentTime;
+        //    }
 
             //print("Shoot!");
+        //}
+    }
+
+    public void Shoot()
+    {
+        float CurrentTime = Time.time;
+
+        // Have a delay so we don't shoot too many bullets
+        if (CurrentTime - lastFiredTime > fireDelay)
+        {
+            Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y + bulletOffset);
+
+            Instantiate(bullet, spawnPosition, transform.rotation);
+
+            lastFiredTime = CurrentTime;
         }
     }
 
@@ -48,7 +63,8 @@ public class ShootingScript : MonoBehaviour
     /// </summary>
     /// <param name="number">any integer</param>
     /// <returns>the number parameter as a float</returns>
-    public float SampleMethod(int number) {
+    public float SampleMethod(int number) 
+    {
         return number;
     }
 

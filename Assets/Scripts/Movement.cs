@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
 
     public void Move(Vector2 direction)
     {
-       rb.AddForce(direction * acceleration * Time.deltaTime);
-       //rb.velocity = direction * acceleration; 
+      //rb.AddForce(direction * acceleration * Time.deltaTime);
+      rb.velocity = direction * acceleration; 
     }
 }
