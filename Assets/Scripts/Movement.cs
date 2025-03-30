@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    //lowered acceleration to 5, due to the lack of inertia 
      [SerializeField]
     private float acceleration = 5f;
 
@@ -15,9 +16,10 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    //new function applicabale to all moving components
     public void Move(Vector2 direction)
     {
-      //movcement with a consistent velocity
+      //movement with a consistent velocity
       rb.velocity = direction * acceleration; 
     }
 }

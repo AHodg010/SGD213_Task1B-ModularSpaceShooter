@@ -16,6 +16,7 @@ public class ConstantSpeedController : MonoBehaviour
     }
 
     // Update is called once per frame
+    //allows for a movement direction to be set in unity
     void Update()
     {
         movement.Move(direction);
